@@ -43,5 +43,7 @@
     "not dead",
     "not ie <= 9",
     "not op_mini all"
-  ]
+  ],
+  
+  "proxy": "http://localhost:8080"
 }

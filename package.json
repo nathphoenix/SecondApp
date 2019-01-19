@@ -1,0 +1,29 @@
+{
+  "name": "bookapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node -- src/index.js",
+    "server": "nodemon -- src/index.js",
+    "client": "npm start --prefix book",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathphoenix"
+  },
+  "author": "Nathphoenix",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.5",
+    "nodemon": "^1.18.9",
+    "path": "^0.12.7"
+  }
+}
