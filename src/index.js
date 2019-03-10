@@ -5,14 +5,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');     //core nodejs module
+const dotenv = require('dotenv')
+const Promise = require('bluebird')
 
 const auth = require('../routes/auth');
 
 
+//to set up dotenv
+dotenv.config();
 
 const app = express();
 
 app.use(bodyParser.json());
+mongoose.Promise = Promise;
 
 //DB Config
 const db = require('../keys/config.js').mongoURI;
@@ -34,7 +39,7 @@ app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.listen(8080, console.log("Running on localhost:8080"));
+app.listen(5000, console.log("Running on localhost:5000"));
 
 
 // important for babelrc

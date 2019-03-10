@@ -23,12 +23,12 @@ class LoginPage extends React.Component {
     }
 }
 
-LoginPage.PropTypes = {
+LoginPage.propTypes = {
     history: PropTypes.shape({
-    push: PropTypes.func.isRequired
+      push: PropTypes.func.isRequired
     }).isRequired,
-login : PropTypes.func.isRequired
-}
+    login: PropTypes.func.isRequired
+  };
 
 // const LoginPage = () => (
 // <div>
